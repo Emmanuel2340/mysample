@@ -1,0 +1,89 @@
+@import "../../global.scss";
+
+.portfolio {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 50px;
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 20px 10px;
+    padding: 0;
+    display: flex;
+    @include mobile {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto;
+      flex-wrap: wrap;
+    }
+  }
+
+  .container {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    flex-wrap: wrap;
+    position: relative;
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+      margin: 10px 10px;
+    }
+    .item {
+      width: 120px;
+      flex-basis: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid #f3ebeb;
+      margin: 5px 10px;
+      @include mobile {
+        width: 90%;
+        flex-basis: 40%;
+        height: 100px;
+        margin: 3px 4px;
+        border: none;
+        text-align: center;
+      }
+      h3 {
+        position: absolute;
+        font-size: 20px;
+        color: white;
+        @include mobile {
+          font-size: 10px;
+        }
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      &:hover {
+        background-color: rgba(62, 25, 150, 0.699);
+        img {
+          z-index: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
